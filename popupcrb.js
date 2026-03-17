@@ -5,7 +5,7 @@
     // =========================
     // KONFIGURASI
     // =========================
-    const ONLY_HOME = false; // ubah ke true kalau mau tampil hanya di /home
+    const ONLY_HOME = true; // ubah ke true kalau mau tampil hanya di /home
     const SHOW_ONLY_ON_HOME = /^\/home\/?$/;
 
     const IMAGES = [
