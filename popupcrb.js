@@ -5,8 +5,20 @@
     // =========================
     // KONFIGURASI
     // =========================
-    const ONLY_HOME = true; // ubah ke true kalau mau tampil hanya di /home
-    const SHOW_ONLY_ON_HOME = /^\/home\/?$/;
+    const ONLY_HOME = true;
+
+    const isHomePage = () => {
+      const path = (location.pathname || "").toLowerCase();
+      const hash = (location.hash || "").toLowerCase();
+
+      return (
+        path === "/" ||
+        path === "/home" ||
+        path === "/home/" ||
+        hash === "#/home" ||
+        hash === "#home"
+      );
+    };
 
     const IMAGES = [
       "https://plcl.me/images/UwhAr.png",
@@ -22,7 +34,7 @@
     // =========================
     // VALIDASI HALAMAN
     // =========================
-    if (ONLY_HOME && !SHOW_ONLY_ON_HOME.test(location.pathname)) return;
+    if (ONLY_HOME && !isHomePage()) return;
     if (!IMAGES.length) return;
 
     // =========================
@@ -230,23 +242,28 @@
       @media (max-width: 768px){
         #popup{ padding:14px; }
         #popup-box{ width:min(96vw, 760px); }
+
         #slider{
           aspect-ratio:16 / 9;
           max-height:none;
           border-radius:16px;
         }
+
         .nav{
           width:40px;
           height:40px;
           font-size:20px;
         }
+
         #prev{ left:8px; }
         #next{ right:8px; }
+
         #close{
           width:32px;
           height:32px;
           font-size:14px;
         }
+
         .btn-ok{
           padding:12px 32px;
           font-size:14px;
@@ -257,6 +274,7 @@
       @media (max-width: 420px){
         #popup-box{ width:96vw; }
         #slider{ aspect-ratio:16 / 10; }
+
         .btn-ok{
           width:100%;
           max-width:220px;
