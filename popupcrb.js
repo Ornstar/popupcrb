@@ -1,25 +1,7 @@
 (() => {
   "use strict";
 
-  function initPopup() {
-    // =========================
-    // KONFIGURASI
-    // =========================
-    const ONLY_HOME = true;
-
-    const isHomePage = () => {
-      const path = (location.pathname || "").toLowerCase();
-      const hash = (location.hash || "").toLowerCase();
-
-      return (
-        path === "/" ||
-        path === "/home" ||
-        path === "/home/" ||
-        hash === "#/home" ||
-        hash === "#home"
-      );
-    };
-
+  function createPopup() {
     const IMAGES = [
       "https://plcl.me/images/UwhAr.png",
       "https://plcl.me/images/eq2uY.png"
@@ -28,34 +10,19 @@
     const BG_IMAGE = "https://plcl.me/images/wap3j.jpg";
     const AUTO_SLIDE_DELAY = 3500;
 
-    // Cegah dobel tampil
+    if (!IMAGES.length) return;
     if (document.getElementById("popupcrb-host")) return;
 
-    // =========================
-    // VALIDASI HALAMAN
-    // =========================
-    if (ONLY_HOME && !isHomePage()) return;
-    if (!IMAGES.length) return;
-
-    // =========================
-    // STATE
-    // =========================
     let currentIndex = 0;
     let autoSlide = null;
     let updateTimer = null;
 
-    // =========================
-    // ROOT SHADOW
-    // =========================
     const host = document.createElement("div");
     host.id = "popupcrb-host";
     document.body.appendChild(host);
 
     const shadow = host.attachShadow({ mode: "open" });
 
-    // =========================
-    // STYLE
-    // =========================
     const style = document.createElement("style");
     style.textContent = `
       #overlay{
@@ -239,7 +206,7 @@
         100%{ transform:translateY(0); }
       }
 
-      @media (max-width: 768px){
+      @media (max-width:768px){
         #popup{ padding:14px; }
         #popup-box{ width:min(96vw, 760px); }
 
@@ -271,7 +238,7 @@
         }
       }
 
-      @media (max-width: 420px){
+      @media (max-width:420px){
         #popup-box{ width:96vw; }
         #slider{ aspect-ratio:16 / 10; }
 
@@ -283,9 +250,6 @@
     `;
     shadow.appendChild(style);
 
-    // =========================
-    // HTML
-    // =========================
     const wrapper = document.createElement("div");
     wrapper.innerHTML = `
       <div id="overlay"></div>
@@ -397,9 +361,47 @@
     startAutoSlide();
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initPopup);
-  } else {
-    initPopup();
+  function isHomePage() {
+    const path = (location.pathname || "").toLowerCase();
+    const hash = (location.hash || "").toLowerCase();
+    const href = (location.href || "").toLowerCase();
+
+    return (
+      path === "/" ||
+      path === "/home" ||
+      path === "/home/" ||
+      path.endsWith("/home") ||
+      path.endsWith("/home/") ||
+      hash === "#/home" ||
+      hash === "#home" ||
+      hash.startsWith("#/home?") ||
+      href.includes("/home")
+    );
   }
+
+  function tryShowPopup() {
+    const ONLY_HOME = true;
+
+    if (ONLY_HOME && !isHomePage()) return;
+    createPopup();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", tryShowPopup);
+  } else {
+    tryShowPopup();
+  }
+
+  window.addEventListener("load", tryShowPopup);
+  window.addEventListener("hashchange", tryShowPopup);
+
+  let retryCount = 0;
+  const retryTimer = setInterval(() => {
+    retryCount += 1;
+    tryShowPopup();
+
+    if (document.getElementById("popupcrb-host") || retryCount >= 10) {
+      clearInterval(retryTimer);
+    }
+  }, 500);
 })();
