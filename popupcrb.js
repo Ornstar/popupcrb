@@ -3,8 +3,8 @@
 
   function createPopup() {
     const IMAGES = [
-      "https://plcl.me/images/bNAKD.png",
-      "https://plcl.me/images/vCeuA.png"
+      "https://plcl.me/images/vCeuA.png",
+      "https://plcl.me/images/bNAKD.png"
     ];
 
     const BG_IMAGE = "https://plcl.me/images/wap3j.jpg";
@@ -154,6 +154,41 @@
       #prev{ left:14px; }
       #next{ right:14px; }
 
+      #popup-text{
+        width:100%;
+        margin-top:14px;
+        padding:0 10px;
+        text-align:center;
+        font-family:Poppins, Arial, sans-serif;
+        color:#fff;
+      }
+
+      #popup-title{
+        margin:0 0 8px;
+        font-size:20px;
+        line-height:1.3;
+        font-weight:900;
+        color:#ffffff;
+        text-shadow:0 0 10px rgba(196,0,255,.35);
+      }
+
+      #popup-desc{
+        margin:0 auto;
+        max-width:640px;
+        font-size:14px;
+        line-height:1.5;
+        font-weight:500;
+        color:rgba(255,255,255,.92);
+      }
+
+      #popup-date{
+        margin-top:8px;
+        font-size:13px;
+        line-height:1.4;
+        font-weight:700;
+        color:#ffd76a;
+      }
+
       #dots{
         display:flex;
         justify-content:center;
@@ -231,6 +266,27 @@
           font-size:14px;
         }
 
+        #popup-text{
+          margin-top:12px;
+          padding:0 8px;
+        }
+
+        #popup-title{
+          font-size:16px;
+          line-height:1.28;
+          margin-bottom:6px;
+        }
+
+        #popup-desc{
+          font-size:12px;
+          line-height:1.42;
+        }
+
+        #popup-date{
+          font-size:11.5px;
+          margin-top:6px;
+        }
+
         .btn-ok{
           padding:12px 32px;
           font-size:14px;
@@ -241,6 +297,19 @@
       @media (max-width:420px){
         #popup-box{ width:96vw; }
         #slider{ aspect-ratio:16 / 10; }
+
+        #popup-title{
+          font-size:15px;
+        }
+
+        #popup-desc{
+          font-size:11.5px;
+          line-height:1.38;
+        }
+
+        #popup-date{
+          font-size:11px;
+        }
 
         .btn-ok{
           width:100%;
@@ -264,8 +333,17 @@
             <button class="nav" id="next" type="button" aria-label="Gambar berikutnya">›</button>
           </div>
 
+          <div id="popup-text">
+            <div id="popup-title">🔥 WAR THR LOYALTY RESMI DIBUKA 🔥</div>
+            <div id="popup-desc">
+              Penukaran THR Telah Dibuka Pada Momen Hari Raya Ini Dengan Kuota Terbatas & Sistem Siapa Cepat Dia Dapat !
+              TUKARKAN POINT LOYALTY KAMU SEKARANG!.
+            </div>
+            <div id="popup-date">Periode: 21 – 23 MARET</div>
+          </div>
+
           <div id="dots"></div>
-          <button class="btn-ok" id="okBtn" type="button">OKE</button>
+          <button class="btn-ok" id="okBtn" type="button">TUKARKAN SEKARANG</button>
         </div>
       </div>
     `;
