@@ -4,7 +4,7 @@
   function createPopup() {
     const IMAGES = [
       "https://plcl.me/images/bNAKD.png",
-      "http://plcl.me/images/vCeuA.png"
+      "https://plcl.me/images/vCeuA.png"
     ];
 
     const BG_IMAGE = "https://plcl.me/images/wap3j.jpg";
