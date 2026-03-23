@@ -3,7 +3,7 @@
 
   function createPopup() {
     const IMAGES = [
-      "https://plcl.me/images/xgTfn.jpg" ,
+      "https://plcl.me/images/zduqD.jpg" ,
       "https://plcl.me/images/QQfYm.png"
     ];
 
@@ -334,7 +334,7 @@
           </div>
 
           <div id="popup-text">
-            <div id="popup-title">🔥 POINT TUKAR JADI CREDIT 🔥</div>
+            <div id="popup-title">🔥 POINT TUKAR CREDIT 🔥</div>
             <div id="popup-desc">
               Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hanggus Tidak Diclaim !
               TUKARKAN POINT KAMU SEKARANG!.
