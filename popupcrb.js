@@ -336,7 +336,7 @@
           <div id="popup-text">
             <div id="popup-title">🔥 POINT TUKAR CREDIT 🔥</div>
             <div id="popup-desc">
-              Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hanggus Tidak Diclaim !
+              Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hangus Tidak Diclaim !
               TUKARKAN POINT KAMU SEKARANG!.
             </div>
             <div id="popup-date">Point Riset Setiap Kamis</div>
