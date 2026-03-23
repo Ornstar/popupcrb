@@ -333,16 +333,16 @@
           </div>
 
           <div id="popup-text">
-            <div id="popup-title">🔥 WAR THR LOYALTY RESMI DIBUKA 🔥</div>
+            <div id="popup-title">🔥 POINT TUKAR JADI CREDIT 🔥</div>
             <div id="popup-desc">
-              Penukaran THR Telah Dibuka Pada Momen Hari Raya Ini Dengan Kuota Terbatas & Sistem Siapa Cepat Dia Dapat !
-              TUKARKAN POINT LOYALTY KAMU SEKARANG!.
+              Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hanggus Tidak Diclaim !
+              TUKARKAN POINT KAMU SEKARANG!.
             </div>
-            <div id="popup-date">Periode: 21 – 23 MARET</div>
+            <div id="popup-date">Point Riset Setiap Kamis</div>
           </div>
 
           <div id="dots"></div>
-          <button class="btn-ok" id="okBtn" type="button">TUKARKAN SEKARANG</button>
+          <button class="btn-ok" id="okBtn" type="button">HUBUNGI ADMIN</button>
         </div>
       </div>
     `;
