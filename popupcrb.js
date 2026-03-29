@@ -335,12 +335,12 @@
           </div>
 
           <div id="popup-text">
-            <div id="popup-title">🔥 POINT TUKAR CREDIT 🔥</div>
+            <div id="popup-title">🔥 100% NEW MEMBER 🔥</div>
             <div id="popup-desc">
-              Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hangus Tidak Diclaim !
-              TUKARKAN POINT KAMU SEKARANG!.
+              Claim Bonus New Member Kamu !
+              Tambahan Saldo Untuk New Member !
             </div>
-            <div id="popup-date">Point Riset Setiap Kamis</div>
+            <div id="popup-date">🔥 AUTO JACKPOT 🔥</div>
           </div>
 
           <div id="dots"></div>
