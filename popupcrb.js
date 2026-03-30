@@ -3,13 +3,15 @@
 
   function createPopup() {
     const IMAGES = [
-      "https://plcl.me/images/wkVT7.jpg" ,
-      "https://plcl.me/images/iEjQn.jpg" ,
+      "https://plcl.me/images/wkVT7.jpg",
+      "https://plcl.me/images/iEjQn.jpg",
       "https://plcl.me/images/QQfYm.png"
     ];
 
     const BG_IMAGE = "https://plcl.me/images/wap3j.jpg";
     const AUTO_SLIDE_DELAY = 3500;
+    const REOPEN_DELAY = 10 * 60 * 1000; // 10 menit
+    const STORAGE_KEY = "popupcrb_last_closed_at";
 
     if (!IMAGES.length) return;
     if (document.getElementById("popupcrb-host")) return;
@@ -417,6 +419,10 @@
     }
 
     function closePopup() {
+      try {
+        localStorage.setItem(STORAGE_KEY, String(Date.now()));
+      } catch (e) {}
+
       stopAutoSlide();
       clearTimeout(updateTimer);
       host.remove();
@@ -458,10 +464,27 @@
     );
   }
 
+  function canShowPopupAgain() {
+    const STORAGE_KEY = "popupcrb_last_closed_at";
+    const REOPEN_DELAY = 10 * 60 * 1000; // 10 menit
+
+    try {
+      const lastClosed = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+      if (!lastClosed) return true;
+
+      const now = Date.now();
+      return now - lastClosed >= REOPEN_DELAY;
+    } catch (e) {
+      return true;
+    }
+  }
+
   function tryShowPopup() {
     const ONLY_HOME = true;
 
     if (ONLY_HOME && !isHomePage()) return;
+    if (!canShowPopupAgain()) return;
+
     createPopup();
   }
 
