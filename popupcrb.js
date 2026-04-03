@@ -3,9 +3,9 @@
 
   function createPopup() {
     const IMAGES = [
-      "https://plcl.me/images/73V2W.png",
-      "https://plcl.me/images/iEjQn.jpg",
-      "https://plcl.me/images/QQfYm.png"
+      "https://plcl.me/images/DkgmW.png",
+      "https://plcl.me/images/KpnPx.png",
+      "https://plcl.me/images/73V2W.png"
     ];
 
     const BG_IMAGE = "https://plcl.me/images/wap3j.jpg";
@@ -337,12 +337,12 @@
           </div>
 
           <div id="popup-text">
-            <div id="popup-title">🔥 100% NEW MEMBER 🔥</div>
+            <div id="popup-title">🔥 POINT TUKAR CREDIT 🔥</div>
             <div id="popup-desc">
-              Claim Bonus New Member Kamu !
-              Tambahan Saldo Untuk New Member !
+              Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hangus Tidak Diclaim !
+              TUKARKAN POINT KAMU SEKARANG!
             </div>
-            <div id="popup-date">🔥 AUTO JACKPOT 🔥</div>
+            <div id="popup-date">🔥 TRIK JACKPOT 🔥</div>
           </div>
 
           <div id="dots"></div>
