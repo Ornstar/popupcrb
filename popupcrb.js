@@ -338,12 +338,12 @@
           </div>
 
           <div id="popup-text">
-            <div id="popup-title">🔥 POINT TUKAR CREDIT 🔥</div>
+            <div id="popup-title">🔥 KUPON DEPOSIT CERIA 🔥</div>
             <div id="popup-desc">
-              Sayang Point Yang Tidak Anda Sadari Setiap Minggu Hangus Tidak Diclaim !
-              TUKARKAN POINT KAMU SEKARANG!
+              Sayang Kupon Yang Tidak Anda Sadari Setiap Minggu Hangus Tidak Diclaim !
+              TUKARKAN KUPON DEPOSIT KAMU SEKARANG!
             </div>
-            <div id="popup-date">🔥 TRIK JACKPOT 🔥</div>
+            <div id="popup-date">🔥 TRIK JACKPOT ADA DIGROUP TELE🔥</div>
           </div>
 
           <div id="dots"></div>
